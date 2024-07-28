@@ -31,8 +31,8 @@ export async function getGithubUsersFromGoogle(): Promise<Set<string>> {
     customer: 'my_customer',
     maxResults: 250,
     projection: 'custom',
-    fields: 'users(customSchemas/Accounts/github(value))',
-    customFieldMask: 'Accounts',
+    fields: 'users(customSchemas/Employee_Information/GitHubUsername)',
+    customFieldMask: 'Employee_Information',
   })
 
   const githubAccounts = mod.formatUserList(userList.data.users)
@@ -43,8 +43,7 @@ export async function getGithubUsersFromGoogle(): Promise<Set<string>> {
 export function formatUserList(users): Set<string> {
   return new Set(
     users
-      .map((user) => user.customSchemas?.Accounts?.github?.map((account) => account.value?.toLowerCase()))
-      .flat()
+      .map((user) => user.customSchemas?.Employee_Information?.GitHubUsername?.toLowerCase())
       .filter(Boolean),
   )
 }
