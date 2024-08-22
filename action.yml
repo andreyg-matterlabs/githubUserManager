@@ -13,13 +13,13 @@ inputs:
     required: true
   add-users:
     description: 'Set to TRUE to add users to the github organisation'
-    required: true
+    required: false
   remove-users:
     description: 'Set to TRUE to remove users from the github organisation'
     required: false
   exit-code-on-missmatch:
     description: 'Exit code to use when there is a mismatch, useful when combined with `ADD_USERS` and `REMOVE_USERS` to be used in a dry-run mode'
-    required: false
+    required: true
   github-org:
     description: 'GitHub Organization  '
     required: true
