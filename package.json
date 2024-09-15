@@ -1,7 +1,7 @@
 {
   "name": "githubusermanager",
   "version": "1.0.0",
-  "description": "1.  [Add a custom attribute on the users](https://support.google.com/a/answer/6208725?hl=en#zippy=%2Cadd-a-new-custom-attribute)",
+  "description": "GitHubUsername: .customSchemas.custom.GitHubUsername",
   "main": "index.js",
   "scripts": {
     "test": "jest --ci",
@@ -9,7 +9,6 @@
     "lint-fix": "eslint --fix .",
     "start": "ts-node index"
   },
-  "author": "Chris Nesbitt-Smith",
   "license": "MIT",
   "devDependencies": {
     "@octokit/types": "13.5.0",
