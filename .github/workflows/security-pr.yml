@@ -29,7 +29,7 @@ jobs:
   security:
     name: Security Suite
     # Pin '@<sha>' (recommended) or '@v1' to the central reusable-workflows repo.
-    uses: my-org/security-workflows/.github/workflows/reusable-security-suite.yml@v1
+    uses: andreyg-matterlabs/security-workflows/.github/workflows/reusable-security-suite.yml@v1
     permissions:
       contents: read          # checkout
       security-events: write  # upload SARIF to Code Scanning
