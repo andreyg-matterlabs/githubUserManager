@@ -1,0 +1,23 @@
+# =============================================================================
+# Dependabot — keeps GitHub Actions pins current.
+# Place in BOTH the security-workflows repo and consumer repos at
+#   .github/dependabot.yml
+#
+# With actions pinned to SHAs, Dependabot opens PRs that bump the SHA AND the
+# trailing version comment, so you get immutability + automated maintenance.
+# =============================================================================
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "github-actions"
+    groups:
+      actions-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
